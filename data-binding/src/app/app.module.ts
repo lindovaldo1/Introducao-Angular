@@ -1,4 +1,6 @@
+import { MeuFormModule } from './meu-form/meu-form.module';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
@@ -8,7 +10,13 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 
 @NgModule({
   declarations: [AppComponent, DataBindingComponent],
-  imports: [BrowserModule, AppRoutingModule, TooltipModule.forRoot()],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    TooltipModule.forRoot(),
+    FormsModule,
+    MeuFormModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,33 @@
+<section class="property-binding">
+  <article>
+    <h3>Two-way-binding</h3>
+    <div>
+      <input
+        type="text"
+        #componenteInput
+        [value]="nome"
+        (input)="nome = componenteInput.value"
+      />
+
+      <input
+        type="text"
+        #componenteInput2
+        [ngModel]="nome"
+        (ngModelChange)="nome = componenteInput2.value"
+      />
+
+      <input type="text" [(ngModel)]="nome" />
+
+      <p>Você digitou: {{ nome }}</p>
+    </div>
+
+    <div>
+      <p>
+        Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade.
+      </p>
+
+      <input type="text" [(ngModel)]="pessoa.nome" />
+      <input type="number" [(ngModel)]="pessoa.idade" />
+    </div>
+  </article>
+</section>
