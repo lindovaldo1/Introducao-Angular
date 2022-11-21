@@ -7,9 +7,10 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { InputPropertyComponent } from './input-property/input-property.component';
 
 @NgModule({
-  declarations: [AppComponent, DataBindingComponent],
+  declarations: [AppComponent, DataBindingComponent, InputPropertyComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
